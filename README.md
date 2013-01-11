@@ -1,0 +1,1 @@
+Repository of reusable CoffeeScript utility classes.
