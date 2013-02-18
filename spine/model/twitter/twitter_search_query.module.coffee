@@ -1,3 +1,5 @@
+TwitterStatus = require 'twitter_status'
+
 class TwitterSearchQuery extends Spine.Model
   @configure 'TwitterQuery', 'query', 'results'
   @extend Spine.Model.Ajax
