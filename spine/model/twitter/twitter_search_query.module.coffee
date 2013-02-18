@@ -17,3 +17,5 @@ class TwitterSearchQuery extends Spine.Model
     super
       query: decodeURIComponent atts.query
       results: results
+
+module.exports = TwitterSearchQuery
