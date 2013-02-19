@@ -1,12 +1,12 @@
-TwitterStatus = require 'twitter_status'
+TwitterStatus = require './twitter_status'
 
 class TwitterSearchQuery extends Spine.Model
   @configure 'TwitterQuery', 'query', 'results'
   @extend Spine.Model.Ajax
 
-  @fetch: (query) ->
+  @fetch: (query, count) ->
     throw 'query required' unless query
-    @url = "http://search.twitter.com/search.json?callback=?&q=#{encodeURIComponent query}"
+    @url = "http://search.twitter.com/search.json?callback=?&q=#{encodeURIComponent query}&count=#{encodeURIComponent count}"
     super
 
   constructor: (atts) ->
